@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "3e595d4f-3332-4686-903a-bdbce7e98734",
+		"name": "LMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6433305"
+	},
+	"item": [
+		{
+			"name": "libraryan",
+			"item": [
+				{
+					"name": "addbook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookname\":\"Html Book\",\r\n    \"description\":\"this is testing\",\r\n    \"bookauthor\":\"test\",\r\n    \"quantity\":\"34\",\r\n    \"status\":0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/librarian/addbook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"librarian",
+								"addbook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "adduser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Ankit Sah\",\r\n    \"email\":\"email\",\r\n    \"mobile\":\"9472283727\",\r\n    \"password\":\"1234\",\r\n    \"status\":\"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/librarian/adduser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"librarian",
+								"adduser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "issuebook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userid\":\"1\",\r\n    \"bookid\":\"4\",\r\n    \"status\":\"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/librarian/issuebook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"librarian",
+								"issuebook"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "allbooks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwicm9sZSI6MCwiaWF0IjoxNjcwMDEwNjIwLCJleHAiOjE2NzAwMTQyMjB9.T5HxHe4Qx8gUzQAIb_dUs0c_ts1Dyy14Z51JqNlZhfU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/user/booklists",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"booklists"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobile\":\"94722837278\",\r\n    \"pwd\":\"Anku@123sah\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "libraryanlogin",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
